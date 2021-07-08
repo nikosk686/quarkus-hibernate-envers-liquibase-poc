@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-revinfo-table
+      author: nikos
+      changes:
+        - createTable:
+            tableName: revinfo
+            columns:
+              - column:
+                  name: rev
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: idv_revinfoPK
+                    nullable: false
+                    autoincrement: true
+              - column:
+                  name: revtstmp
+                  type: bigint

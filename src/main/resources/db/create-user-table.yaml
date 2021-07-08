@@ -1,0 +1,22 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user-table
+      author: nikos
+      changes:
+        - createTable:
+            tableName: poc_user
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: idv_userPK
+                    nullable: false
+                    autoincrement: false
+              - column:
+                  name: username
+                  type: varchar(16)
+              - column:
+                  name: age
+                  type: int

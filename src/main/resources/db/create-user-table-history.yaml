@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user-table-history
+      author: nikos
+      changes:
+        - createTable:
+            tableName: poc_user_history
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: idv_user_histPK
+                    nullable: false
+                    autoincrement: true
+              - column:
+                  name: rev
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                    primaryKeyName: idv_user_histPK
+                    nullable: false
+                    autoincrement: true
+              - column:
+                  name: revtype
+                  type: tinyint
+              - column:
+                  name: username
+                  type: varchar(16)
+              - column:
+                  name: age
+                  type: int

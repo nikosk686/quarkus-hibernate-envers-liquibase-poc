@@ -1,0 +1,16 @@
+version: "3.6"
+services:
+
+  db_hibernate_envers_poc:
+    image: "postgres:11.1"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: db_hibernate_envers_poc
+      POSTGRES_USER: nikos
+      POSTGRES_PASSWORD: nikos
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:

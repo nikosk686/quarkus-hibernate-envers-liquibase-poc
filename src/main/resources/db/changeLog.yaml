@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - include:
+      file: db/create-user-table.yaml
+  - include:
+      file: db/create-user-table-history.yaml
+  - include:
+      file: db/create-revinfo-table.yaml
+  - include:
+      file: db/create-sequences.yaml
